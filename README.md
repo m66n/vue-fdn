@@ -84,3 +84,7 @@ In *build/utils.js*, modify the `scss` loader configuration (line 53-ish) to loo
 ```
 
 In the app's main component file (*App.vue*), add the attribute `lang="scss"` to the style tag, and add `@import 'styles/style';` to the style section. This should cover all sub-components, i.e. no need to use `@import 'styles/style';` anywhere else.
+
+## Use Foundation JS in Vue Components
+
+Add `mounted ()` and `destroyed ()` functions to a Vue component to attach and remove Foundation JS to and from a jQuery object. Check out the *src/components* directory for examples.
