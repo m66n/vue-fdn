@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container">
     <div class="grid-x grid-padding-x align-center">
-      <div class="cell medium-8">
+      <div class="cell medium-6">
         <form data-abide novalidate>
           <div class="grid-x grid-padding-x">
             <div class="cell">

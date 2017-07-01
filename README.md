@@ -66,11 +66,11 @@ In *.eslintrc.js* add `jquery: true` to the `env` property.
 
 ## Add styles
 
-In *src* directory create a *styles* directory. Copy *_settings.scss* from *node_modules\foundation-sites\scss\settings* to the newly-created *styles* directory. Create a file, *style.scss* (or whatever name you prefer), in the *styles* directory and make it look like this:
+Create directory *src/styles* and into it copy *_settings.scss* from *node_modules\foundation-sites\scss\settings*. Tweak *_settings.scss* to your liking. In the same directory, create a new file, *style.scss* (or whatever name you prefer), and make it look like this:
 
 ``` scss
 @import 'settings';
-@import '~foundation-sites/scss/foundation';
+@import 'foundation';
 
 @include foundation-everything;
 ```
@@ -87,4 +87,4 @@ In the app's main component file (*App.vue*), add the attribute `lang="scss"` to
 
 ## Use Foundation JS in Vue Components
 
-Add `mounted ()` and `destroyed ()` functions to a Vue component to attach and remove Foundation JS to and from a jQuery object. Check out the *src/components* directory for examples.
+In a Vue compomponent, add `mounted ()` to create a Foundation object from a jQuery object, and `destroyed ()` to clean it up. Check out the *src/components* directory for examples.
