@@ -87,4 +87,4 @@ In the app's main component file (*App.vue*), add the attribute `lang="scss"` to
 
 ## Use Foundation JS in Vue Components
 
-In a Vue compomponent, add `mounted ()` to create a Foundation object from a jQuery object, and `destroyed ()` to clean it up. Check out the *src/components* directory for examples.
+In a Vue component, add `mounted ()` to create a Foundation object from a jQuery object, and `destroyed ()` to clean it up. Check out the *src/components* directory for examples.
