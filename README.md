@@ -44,7 +44,7 @@ Vue.prototype.$foundation = Foundation
 
 ## Integrate jQuery
 
-In *build\webpack.base.conf.js* add `webpack` and `jquery` requires at the top of the file
+In *build/webpack.base.conf.js* add `webpack` and `jquery` requires at the top of the file
 
 ``` javascript
 var webpack = require('webpack')
@@ -66,7 +66,7 @@ In *.eslintrc.js* add `jquery: true` to the `env` property.
 
 ## Add styles
 
-Create directory *src/styles* and into it copy *_settings.scss* from *node_modules\foundation-sites\scss\settings*. Tweak *_settings.scss* to your liking. In the same directory, create a new file, *style.scss* (or whatever name you prefer), and make it look like this:
+Create directory *src/styles* and into it copy *_settings.scss* from *node_modules/foundation-sites/scss/settings*. Tweak *_settings.scss* to your liking. In the same directory, create a new file, *style.scss* (or whatever name you prefer), and make it look like this:
 
 ``` scss
 @import 'settings';
