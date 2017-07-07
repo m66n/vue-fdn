@@ -48,7 +48,7 @@ In *build/webpack.base.conf.js* add `webpack` and `jquery` requires at the top o
 
 ``` javascript
 var webpack = require('webpack')
-var jquery = require('jquery/dist/jquery.min.js')
+var jquery = require('jquery')
 ```
 
 then add a `plugins` property to `modules.exports`:
