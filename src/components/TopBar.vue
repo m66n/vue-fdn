@@ -1,5 +1,6 @@
 <template>
   <div class="grid-container">
+    <h4>Top Bar with Dropdown Menu</h4>
     <div class="grid-x grid-padding-x align-center">
       <div class="medium-10 cell">
         <div class="top-bar">

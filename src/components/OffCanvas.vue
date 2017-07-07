@@ -1,5 +1,6 @@
 <template>
   <div class="grid-container">
+    <h4>Off Canvas</h4>
     <div class="grid-x grid-padding-x align-center">
       <div class="cell medium-8">
         <div class="grid-x grid-padding-x">

@@ -1,5 +1,6 @@
 <template>
   <div class="grid-container">
+    <h4>Accordion Menu</h4>
     <div class="grid-x grid-padding-x align-center">
       <div class="medium-6 cell">
         <ul class="vertical menu accordion-menu" data-accordion-menu>
@@ -32,5 +33,4 @@
   .grid-container {
     margin-top: 2rem;
   }
-
 </style>

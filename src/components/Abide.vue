@@ -1,5 +1,6 @@
 <template>
   <div class="grid-container">
+    <h4>Abide</h4>
     <div class="grid-x grid-padding-x align-center">
       <div class="cell medium-6">
         <form data-abide novalidate>
@@ -32,5 +33,4 @@
   .grid-container {
     margin-top: 2rem;
   }
-
 </style>

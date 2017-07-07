@@ -1,5 +1,6 @@
 <template>
   <div class="grid-container">
+    <h4>Slider</h4>
     <div class="grid-x grid-padding-x align-center">
       <div class="cell medium-8">
         <div class="slider" data-slider data-initial-start="50" data-end="200">
