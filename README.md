@@ -88,3 +88,17 @@ In the app's main component file (*App.vue*), add the attribute `lang="scss"` to
 ## Use Foundation JS in Vue Components
 
 In a Vue component, add `mounted ()` to create a Foundation object from a jQuery object, and `destroyed ()` to clean it up. Check out the *src/components* directory for examples.
+
+Executing `npm run build` will give the error ``Unexpected character '`' [./~/foundation-sites/js/foundation.util.core.js:24,0]``. Modify *build/webpack.base.conf.js* to include the Foundation for Sites JS folder in `babel-loader` config:
+
+``` javascript
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: [
+          resolve('src'),
+          resolve('test'),
+          resolve('node_modules/foundation-sites')
+        ]
+      },
+```
