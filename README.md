@@ -66,7 +66,7 @@ In *.eslintrc.js* add `jquery: true` to the `env` property.
 
 ## Add styles
 
-Create directory *src/styles* and into it copy *_settings.scss* from *node_modules/foundation-sites/scss/settings*. Tweak *_settings.scss* to your liking. In the same directory, create a new file, *style.scss* (or whatever name you prefer), and make it look like this:
+Create directory *src/styles*. Copy *node_modules/foundation-sites/scss/settings/_settings.scss* into this new directory and tweak it to your liking. In this same directory, create a new file, *style.scss*, and make it look like this:
 
 ``` scss
 @import 'settings';
@@ -89,7 +89,12 @@ In the app's main component file (*App.vue*), add the attribute `lang="scss"` to
 
 In a Vue component, add `mounted ()` to create a Foundation object from a jQuery object, and `destroyed ()` to clean it up. Check out the *src/components* directory for examples.
 
-Executing `npm run build` will give the error ``Unexpected character '`' [./~/foundation-sites/js/foundation.util.core.js:24,0]``. Modify *build/webpack.base.conf.js* to include the Foundation for Sites JS folder in `babel-loader` config:
+Executing `npm run build` will give the error:
+``` bash
+Unexpected character '`' [./~/foundation-sites/js/foundation.util.core.js:24,0]
+```
+
+To address this error, modify *build/webpack.base.conf.js* to include the Foundation for Sites folder in `babel-loader` config:
 
 ``` javascript
       {
