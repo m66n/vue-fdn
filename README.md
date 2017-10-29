@@ -85,6 +85,17 @@ In *build/utils.js*, modify the `scss` loader configuration (line 53-ish) to loo
 
 In the app's main component file (*App.vue*), add the attribute `lang="scss"` to the style tag, and add `@import 'styles/style';` to the style section. This should cover all sub-components, i.e. no need to use `@import 'styles/style';` anywhere else.
 
+Merge [Foundation's Autoprefixer browsers settings](https://foundation.zurb.com/sites/docs/sass.html#autoprefixer-required) into the existing `browserslist` in *package.json*:
+
+``` json
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie >= 9",
+    "and_chr >= 2.3"
+  ]
+```
+
 ## Use Foundation JS in Vue Components
 
 In a Vue component, add `mounted ()` to create a Foundation object from a jQuery object, and `destroyed ()` to clean it up. Check out the *src/components* directory for examples.
