@@ -28,7 +28,7 @@
                 <!-- Your menu or Off-canvas content goes here -->
               </div>
               <div class="off-canvas-content" style="min-height: 300px;" data-off-canvas-content>
-                <p>Im a unique off-canvas container all on my own!</p>
+                <p>I&rsquo;m a unique off-canvas container all on my own!</p>
               </div>
             </div>
           </div>

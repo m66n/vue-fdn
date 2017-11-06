@@ -1,6 +1,7 @@
 <template>
   <div>
     <top-bar></top-bar>
+    <reveal></reveal>
     <abide></abide>
     <dropdown></dropdown>
     <slider></slider>
@@ -11,6 +12,7 @@
 
 <script>
   import TopBar from '@/components/TopBar'
+  import Reveal from '@/components/Reveal'
   import Abide from '@/components/Abide'
   import Dropdown from '@/components/Dropdown'
   import Slider from '@/components/Slider'
@@ -20,6 +22,7 @@
   export default {
     components: {
       'top-bar': TopBar,
+      'reveal': Reveal,
       'abide': Abide,
       'dropdown': Dropdown,
       'slider': Slider,
