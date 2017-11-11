@@ -3,7 +3,7 @@
     <h4>Reveal</h4>
     <div class="grid-x grid-padding-x align-center">
       <div class="cell medium-6">
-        <div class="reveal" id="reveal" data-reveal>
+        <div class="reveal" id="reveal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
           <h4>Information</h4>
           <table>
             <thead>

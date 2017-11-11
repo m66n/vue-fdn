@@ -30,6 +30,9 @@ npm i -D sass-loader node-sass
 
 # install Foundation
 npm i -S foundation-sites
+
+# install Motion UI (optional)
+npm i -S motion-ui
 ```
 
 ## Modify *src/main.js*
@@ -66,20 +69,25 @@ In *.eslintrc.js* add `jquery: true` to the `env` property.
 
 ## Add styles
 
-Create directory *src/styles*. Copy *node_modules/foundation-sites/scss/settings/_settings.scss* into this new directory and tweak it to your liking. In this same directory, create a new file, *style.scss*, and make it look like this:
+Create directory *src/styles*. Copy *node_modules/foundation-sites/scss/settings/_settings.scss* into this new directory and [tweak it to your liking](https://foundation.zurb.com/sites/docs/sass.html#the-settings-file). In this same directory, create a new file, *style.scss*, and make it look like this:
 
 ``` scss
 @import 'settings';
 @import 'foundation';
+@import 'motion-ui'; // optional
 
 @include foundation-everything;
+@include motion-ui-transitions; // optional
 ```
 
 In *build/utils.js*, modify the `scss` loader configuration (line 53-ish) to look like:
 
 ``` javascript
     scss: generateLoaders('sass', {
-      includePaths: ['node_modules/foundation-sites/scss']
+      includePaths: [
+        'node_modules/foundation-sites/scss',
+        'node_modules/motion-ui/src/' // optional
+      ]
     }),
 ```
 

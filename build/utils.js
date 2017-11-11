@@ -51,7 +51,10 @@ exports.cssLoaders = function (options) {
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass', {
-      includePaths: ['node_modules/foundation-sites/scss']
+      includePaths: [
+        'node_modules/foundation-sites/scss',
+        'node_modules/motion-ui/src/'
+      ]
     }),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
