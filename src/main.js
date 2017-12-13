@@ -8,6 +8,8 @@ import Foundation from 'foundation-sites'
 Vue.config.productionTip = false
 
 Vue.prototype.$foundation = Foundation
+/* now is defined in build/webpack.base.conf.js */
+Vue.prototype.$buildDate = now
 
 /* eslint-disable no-new */
 new Vue({

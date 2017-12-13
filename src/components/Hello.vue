@@ -6,6 +6,7 @@
     <dropdown></dropdown>
     <slider></slider>
     <accordion-menu></accordion-menu>
+    <tooltip></tooltip>
     <off-canvas></off-canvas>
   </div>
 </template>
@@ -17,6 +18,7 @@
   import Dropdown from '@/components/Dropdown'
   import Slider from '@/components/Slider'
   import AccordionMenu from '@/components/AccordionMenu'
+  import Tooltip from '@/components/Tooltip'
   import OffCanvas from '@/components/OffCanvas'
 
   export default {
@@ -27,6 +29,7 @@
       'dropdown': Dropdown,
       'slider': Slider,
       'accordion-menu': AccordionMenu,
+      'tooltip': Tooltip,
       'off-canvas': OffCanvas
     }
   }

@@ -5,6 +5,11 @@ var vueLoaderConfig = require('./vue-loader.conf')
 var webpack = require('webpack')
 var jquery = require('jquery')
 
+function now() {
+  var now = new Date()
+  return now.toUTCString()
+}
+
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -74,6 +79,9 @@ module.exports = {
     new webpack.ProvidePlugin({
       'jQuery': 'jquery',
       '$': 'jquery'
+    }),
+    new webpack.DefinePlugin({
+      'now': JSON.stringify(now())
     })
   ]
 }
