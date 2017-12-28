@@ -58,8 +58,7 @@ module.exports = {
         loader: 'babel-loader',
         include: [
           resolve('src'),
-          resolve('test'),
-          resolve('node_modules/foundation-sites')
+          resolve('test')
         ]
       },
       {
