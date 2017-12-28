@@ -50,8 +50,8 @@ Vue.prototype.$foundation = Foundation
 In *build/webpack.base.conf.js* add `webpack` and `jquery` requires at the top of the file
 
 ``` javascript
-var webpack = require('webpack')
-var jquery = require('jquery')
+const webpack = require('webpack')
+const jquery = require('jquery')
 ```
 
 then add a `plugins` property to `modules.exports`:
@@ -80,7 +80,7 @@ Create directory *src/styles*. Copy *node_modules/foundation-sites/scss/settings
 @include motion-ui-transitions; // optional
 ```
 
-In *build/utils.js*, modify the `scss` loader configuration (line 53-ish) to look like:
+In *build/utils.js*, modify the `scss` loader configuration (line 63-ish) to look like:
 
 ``` javascript
     scss: generateLoaders('sass', {
@@ -104,25 +104,17 @@ Merge [Foundation's Autoprefixer browsers settings](https://foundation.zurb.com/
   ]
 ```
 
+and into `browsers` in *.babelrc*:
+
+``` json
+        "browsers": [
+          "> 1%",
+          "last 2 versions",
+          "ie >= 9",
+          "and_chr >= 2.3"
+        ]
+```
+
 ## Use Foundation JS in Vue Components
 
 In a Vue component, add `mounted ()` to create a Foundation object from a jQuery object, and `destroyed ()` to clean it up. Check out the *src/components* directory for examples.
-
-Executing `npm run build` will give the error:
-``` bash
-Unexpected character '`' [./~/foundation-sites/js/foundation.util.core.js:24,0]
-```
-
-To address this error, modify *build/webpack.base.conf.js* to include the Foundation for Sites folder in `babel-loader` config:
-
-``` javascript
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: [
-          resolve('src'),
-          resolve('test'),
-          resolve('node_modules/foundation-sites')
-        ]
-      },
-```
